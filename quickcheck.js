@@ -1,7 +1,7 @@
 /*jslint nodejs:true */
 
 function arbBool() {
-	return Math.random() > 0.5 ? true : false;
+	return Math.random() > 0.5;
 }
 
 exports.arbBool = arbBool;
