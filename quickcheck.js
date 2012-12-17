@@ -58,11 +58,12 @@ exports.arbHex = arbHex;
 function arbArray(generator) {
 	var
 		len = Math.floor(Math.random() * 100),
+		args = Array.prototype.slice.call(arguments, 1),
 		array = [],
 		i;
 
 	for (i = 0; i < len; i++) {
-		array.push(generator());
+		array.push(generator.apply(null, args));
 	}
 
 	return array;
