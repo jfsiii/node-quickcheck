@@ -38,7 +38,7 @@ function arbIntBetween(n, m) {
 exports.arbIntBetween = arbIntBetween;
 
 function arbByte() {
-	return Math.floor(Math.random() * 256);
+	return arbIntBetween(0, 255);
 }
 
 exports.arbByte = arbByte;
