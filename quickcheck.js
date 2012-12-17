@@ -6,16 +6,22 @@ function arbBool() {
 
 exports.arbBool = arbBool;
 
+function arbSign() {
+	return arbBool() ? 1 : -1;
+}
+
+exports.arbSign = arbSign;
+
 function arbDouble() {
-	var sign = Math.random() > 0.5 ? 1 : -1;
+	var sign = arbSign();
 	return sign * Math.random() * Number.MAX_VALUE;
 }
 
 exports.arbDouble = arbDouble;
 
 function arbInt() {
-	var sign = Math.random() > 0.5 ? 1 : -1;
 	return sign * Math.floor(Math.random() * Number.MAX_VALUE);
+	var sign = arbSign();
 }
 
 exports.arbInt = arbInt;
