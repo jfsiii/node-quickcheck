@@ -20,8 +20,8 @@ function arbDouble() {
 exports.arbDouble = arbDouble;
 
 function arbInt() {
-	return sign * Math.floor(Math.random() * Number.MAX_VALUE);
 	var sign = arbSign();
+	return sign * Math.floor(arbDouble());
 }
 
 exports.arbInt = arbInt;
