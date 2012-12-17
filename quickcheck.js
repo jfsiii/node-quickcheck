@@ -26,6 +26,17 @@ function arbInt() {
 
 exports.arbInt = arbInt;
 
+function arbIntBetween(n, m) {
+    if (!n) n = 0;
+    if (!m) m = 1;               // default range starts at 1
+    var max = n > m ? n : m;     // doesn't matter which value is min or max
+    var min = n === max ? m : n; // min is value that is not max
+    var delta = max - min + 1;   // distribution range
+    return Math.floor(Math.random() * delta + min);
+}
+
+exports.arbIntBetween = arbIntBetween;
+
 function arbByte() {
 	return Math.floor(Math.random() * 256);
 }
