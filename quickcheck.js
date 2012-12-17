@@ -38,6 +38,12 @@ function arbChar() {
 
 exports.arbChar = arbChar;
 
+function arbHex() {
+	return arbByte().toString(16);
+}
+
+exports.arbHex = arbHex;
+
 function arbArray(generator) {
 	var
 		len = Math.floor(Math.random() * 100),
